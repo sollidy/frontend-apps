@@ -1,21 +1,28 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
+import PostService from './API/PostService';
 import PostFilter from './components/PostFilter';
 import PostForm from './components/PostForm';
 import PostsList from './components/PostsList';
 import MyButton from './components/UI/button/MyButton';
+import Loader from './components/UI/Loader/Loader';
 import MyModal from './components/UI/MyModal/MyModal';
+import { useFetching } from './hooks/useFetching';
 import { usePosts } from './hooks/usePosts';
 import './styles/App.css'
 
 function App() {
-  const [posts, setPosts] = useState([
-    { id: 1, title: 'JavaScript 0', body: 'Description' },
-    { id: 2, title: 'NJavaScript 1', body: 'ADescription' },
-    { id: 3, title: 'BJavaScript 2', body: 'BDescription' }
-  ]);
+  const [posts, setPosts] = useState([]);
   const [filter, setFilter] = useState({ sort: '', query: '' });
   const [modal, setModal] = useState(false);
   const sortedAndSearchedPosts = usePosts(posts, filter.sort, filter.query)
+  const [fetchPosts, isPostLoading, postError] = useFetching(async () => {
+    const posts = await PostService.getAll()
+    setPosts(posts)
+  })
+
+  useEffect(() => {
+    fetchPosts()
+  }, []);
 
   // callback
   const createPost = (newPost) => {
@@ -45,11 +52,21 @@ function App() {
         filter={filter}
         setFilter={setFilter}
       />
-      < PostsList
-        remove={removePost}
-        posts={sortedAndSearchedPosts}
-        title="JS posts"
-      />
+      {postError &&
+        <h1>Some error ocured - {postError}</h1>
+      }
+      {isPostLoading
+        ? <div
+          style={{ display: 'flex', justifyContent: 'center', marginTop: '20px' }}>
+          <Loader />
+        </div>
+        : !postError &&
+        < PostsList
+          remove={removePost}
+          posts={sortedAndSearchedPosts}
+          title="JS posts"
+        />
+      }
     </div>
   );
 }
