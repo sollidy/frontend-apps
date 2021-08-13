@@ -10,7 +10,6 @@ const AppRouter = () => {
     // if (isLoading) {
     //     return <Loader />
     // }
-
     return (
         isAuth
             ?

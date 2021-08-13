@@ -5,9 +5,9 @@
 }
 
 #root {
-    display        : flex;
+    display       : flex;
     flex-direction: column;
-    align-items: center;
+    align-items   : center;
 }
 
 .App {
@@ -18,13 +18,17 @@
     display        : flex;
     padding        : 15px;
     border         : 2px solid teal;
-    margin-top     : 15px;
+    margin-top     : 20px;
     justify-content: space-between;
     align-items    : center;
 }
 .post__btns {
     display: flex;
 }
+
+.post__btns > * {
+    margin-left: 5px ;
+  } 
 
 .post-enter {
     opacity  : 0;
@@ -55,20 +59,37 @@
 .page {
     padding: 10px;
     border : 1px solid teal;
-    cursor : pointer;
+    /* cursor : pointer; */
 }
+
 .page__current {
-    border: 2px solid orange;
+    background: lightgrey;
     font-weight: bold;
 }
-.navbar{
-    height: 50px;
-    width: 100vw;
-    display: flex;
+
+.navbar {
+    height     : 50px;
+    width      : 100vw;
+    display    : flex;
     align-items: center;
-    padding: 0 15px;
-    background: lightgray;
+    padding    : 0 15px;
+    background : lightgray;
 }
-.navbar__links{
+
+.navbar__links {
     margin-left: auto;
+}
+.navbar__items {
+    margin-left: 5px;
+    text-decoration: none !important;
+    padding   : 5px 15px;
+    color     : black;
+    background: white;
+    font-size : 14px;
+    border: 1px solid teal
+    
+}
+
+.item__margin__top {
+    margin-top: 20px;
 }

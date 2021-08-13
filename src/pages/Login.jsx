@@ -13,7 +13,7 @@ const Login = () => {
     }
 
     return (
-        <div>
+        <div className='item__margin__top'>
             <h1>Login page</h1>
             <form onSubmit={login}>
                 <MyInput type='text' placeholder='Enter login' />

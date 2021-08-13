@@ -7,11 +7,11 @@ import Loader from '../components/UI/Loader/Loader';
 const PostIdPage = () => {
     const [post, setPost] = useState({});
     const [comments, setComments] = useState([]);
-    const [fetchPostById, isLoading, error] = useFetching(async (id) => {
+    const [fetchPostById, isLoading] = useFetching(async (id) => {
         const response = await PostService.getPostById(params.id)
         setPost(response.data)
     })
-    const [fetchComments, isComLoading, errorCom] = useFetching(async (id) => {
+    const [fetchComments, isComLoading] = useFetching(async (id) => {
         const response = await PostService.getCommentsById(params.id)
         setComments(response.data)
     })
@@ -21,18 +21,18 @@ const PostIdPage = () => {
     }, []);
     const params = useParams()
     return (
-        <div>
-            <h1>Page of post with ID = {params.id}</h1>
+        <div className='App item__margin__top'>
+            <h1>Post.{params.id}</h1>
             {isLoading
                 ? <Loader />
-                : <div className={'post'}>{post.id}.{post.title}</div>
+                : <h3 className={'post'}>{post.title}</h3>
             }
-            <h1>Comments:</h1>
+            <h1 className='item__margin__top'>Comments:</h1>
             {isComLoading
                 ? <Loader />
                 : <div>
                     {comments.map(comm =>
-                        <div style={{ marginTop: '10px' }} key={comm.id}>
+                        <div className='item__margin__top' key={comm.id}>
                             <h5>
                                 {comm.email}
                             </h5>

@@ -1,5 +1,4 @@
 import React, { useEffect, useRef, useState } from 'react';
-import MySelect from '../components/UI/select/MySelect';
 import { useObserver } from '../hooks/useObserver';
 import PostService from './../API/PostService';
 import PostFilter from './../components/PostFilter';
@@ -23,7 +22,6 @@ function Posts() {
   const [page, setPage] = useState(1);
   const lastElement = useRef()
   const sortedAndSearchedPosts = usePosts(posts, filter.sort, filter.query)
-
   const [fetchPosts, isPostLoading, postError] = useFetching(
     async (limit, page) => {
       const response = await PostService.getAll(limit, page)
@@ -34,14 +32,13 @@ function Posts() {
 
   useObserver(
     lastElement,
-    page < totalPages,
+    !filter.query.length && page < totalPages,
     isPostLoading,
-    () => setPage(page + 1))
-
-
+    () => setPage(page + 1),
+    filter.query)
   useEffect(() => {
     fetchPosts(limit, page)
-  }, [page, limit]);
+  }, [limit, page]);
 
   // callback
   const createPost = (newPost) => {
@@ -51,54 +48,57 @@ function Posts() {
   const removePost = (post) => {
     setPosts(posts.filter(p => p.id !== post.id))
   }
-  const changePage = (page) => {
-    setPage(page)
-  }
+  // const changePage = (page) => {
+  //   setPage(page)
+  // }
 
   return (
     <div className='App'>
-      <MyButton
-        style={{ marginTop: '30px' }}
-        onClick={() => setModal(true)}
-      >
-        New Post
-      </MyButton>
-      <MyModal
-        visible={modal}
-        setVisible={setModal}
-      >
-        <PostForm create={createPost} />
-      </MyModal>
-      <hr style={{ margin: '15px 0' }} />
-      <PostFilter
-        filter={filter}
-        setFilter={setFilter}
-      />
-      <MySelect 
-      value={limit}
-      onChange={value => setLimit(value)}
-      defaultValue='Numbers of elements'
-      options={[
-        {value: 5, name: '5'},
-        {value: 10, name: '10'},
-        {value: 25, name: '25'},
-        {value: -1, name: 'All'}
-      ]}
-      >
-
-      </MySelect>
+      <div>
+        <MyButton
+          style={{ marginTop: '20px' }}
+          onClick={() => setModal(true)}
+        >
+          New Post
+        </MyButton>
+        <MyModal
+          visible={modal}
+          setVisible={setModal}
+        >
+          <PostForm create={createPost} />
+        </MyModal>
+        <hr style={{ margin: '15px 0' }} />
+        <PostFilter
+          filter={filter}
+          setFilter={setFilter}
+        />
+        <MyButton
+          onClick={() => setLimit(100)}
+        >
+          Show all Posts
+        </MyButton>
+      </div>
       {postError &&
         <h1>Some error ocured - {postError}</h1>
       }
-      {!postError &&
-        < PostsList
-          remove={removePost}
-          posts={sortedAndSearchedPosts}
-          title="JS posts"
+      <div>
+        {!postError && <Pagination
+          totalPages={totalPages}
+          page={page}
+        // changePage={changePage}
         />}
+      </div>
+      <div>
+        {!postError &&
+          < PostsList
+            remove={removePost}
+            posts={sortedAndSearchedPosts}
+            title="Posts list"
+          />}
+      </div>
       <div
         ref={lastElement}
-        style={{ height: '20px', background: 'red' }}>
+        style={{ marginTop: '10px', height: '20px', background: 'lightgray' }}>
       </div>
       {isPostLoading &&
         <div
@@ -106,10 +106,6 @@ function Posts() {
           <Loader />
         </div>
       }
-      <Pagination
-        totalPages={totalPages}
-        page={page}
-        changePage={changePage} />
     </div>
   );
 }
