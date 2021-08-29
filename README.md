@@ -1,19 +1,7 @@
-# vue-ulbi-app
+# Posts List App (In developing)
 
-## Project setup
-```
-npm install
-```
+## About project:
+This is an educational project of the YouTube channel [Ulbi TV](https://www.youtube.com/channel/UCDzGdB9TTgFm8jRXn1tBdoA) - <b>"Vue 3 фундаментальный курс от А до Я"</b>.
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+### Technology:
+1)[Vue 3](https://v3.vuejs.org/) \
