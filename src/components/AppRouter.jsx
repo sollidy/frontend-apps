@@ -6,10 +6,7 @@ import { privatRoutes, publicRoutes } from '../router';
 
 const AppRouter = () => {
 
-    const { isAuth, isLoading } = useContext(AuthContext)
-    // if (isLoading) {
-    //     return <Loader />
-    // }
+    const { isAuth } = useContext(AuthContext)
     return (
         isAuth
             ?
