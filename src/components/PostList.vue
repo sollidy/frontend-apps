@@ -1,17 +1,19 @@
 <template>
-  <div class="post" v-for="post in posts" v-bind:key="post.id">
-    <div><strong>Title:</strong>{{ post.title }}</div>
-    <div><strong>Description:</strong>{{ post.body }}</div>
+  <div>
+    <h3>Posts List:</h3>
+    <post-item :post="post" v-for="post in posts" v-bind:key="post.id" />
   </div>
 </template>
 
 <script>
+import PostItem from "./PostItem.vue";
 export default {
+  components: { PostItem },
   props: {
-      posts: {
-          type: Array,
-          required: true,
-      }
+    posts: {
+      type: Array,
+      required: true,
+    },
   },
 };
 </script>
