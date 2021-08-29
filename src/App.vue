@@ -1,20 +1,19 @@
 <template>
-  <div class='app'>
-    <form>
-        <h4>New Post</h4>
-      <input class='input' type="text" placeholder="Title" />
-      <input class='input' type="text" placeholder="Description" />
-      <button class='btn' @click="createPost">Create</button>
-    </form>
-    <div class="post" v-for="post in posts" v-bind:key="post.id">
-      <div><strong>Title:</strong>{{ post.title }}</div>
-      <div><strong>Description:</strong>{{ post.body }}</div>
-    </div>
+  <div class="app">
+    <post-form @create="createPost" />
+    <post-list :posts="posts" />
   </div>
 </template>
 
 <script>
+import PostForm from "@/components/PostForm";
+import PostList from "@/components/PostList";
+
 export default {
+  components: {
+    PostForm,
+    PostList,
+  },
   data() {
     return {
       posts: [
@@ -25,9 +24,9 @@ export default {
     };
   },
   methods: {
-      createPost() {
-          
-      }
+    createPost(post) {
+      this.posts.push(post);
+    },
   },
 };
 </script>
@@ -38,30 +37,8 @@ export default {
   padding: 0;
   box-sizing: border-box;
 }
-.post {
-  padding: 15px;
-  border: 2px solid teal;
-  margin-top: 15px;
-}
-.input {
-    width: 100%;
-    border: 1px solid teal;
-    padding: 10px 15px;
-    margin-top: 15px;
-}
-.app{
-    padding: 20px 20px;
-}
-form {
-    display: flex;
-    flex-direction: column;
-}
-.btn {
-    margin-top: 15px;
-    align-self: flex-end;
-    padding: 10px 15px;
-    background: none;
-    color: teal;
-    border: 1px solid teal
+
+.app {
+  padding: 20px 20px;
 }
 </style>
