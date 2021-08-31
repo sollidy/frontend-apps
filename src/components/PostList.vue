@@ -1,8 +1,10 @@
 <template>
-  <div>
+  <div v-if="posts.length > 0">
     <h3>Posts List:</h3>
-    <post-item :post="post" v-for="post in posts" v-bind:key="post.id" />
+    <post-item @remove="$emit('remove',post)"
+    :post="post" v-for="post in posts" :key="post.id" />
   </div>
+  <h2 v-else>List is empty!</h2>
 </template>
 
 <script>
