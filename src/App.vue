@@ -1,24 +1,26 @@
 <template>
-  <div class="app">
-    <h1>Posts</h1>
-    <my-input v-model="searchQuery" placeholder="Find" />
-    <div class="app__btns">
-      <my-button @click="showDialog">Create new post</my-button>
-      <my-select v-model="selectedSort" :options="sortOptions" />
-    </div>
+  <div id="root">
+    <div class="app">
+      <h1>Posts</h1>
+      <my-input v-model="searchQuery" placeholder="Find" />
+      <div class="app__btns">
+        <my-button @click="showDialog">Create new post</my-button>
+        <my-select v-model="selectedSort" :options="sortOptions" />
+      </div>
 
-    <my-dialog v-model:show="dialogVisible">
+      <my-dialog v-model:show="dialogVisible">
+        <post-form @create="createPost" />
+      </my-dialog>
+
       <post-form @create="createPost" />
-    </my-dialog>
-
-    <post-form @create="createPost" />
-    <post-list
-      @remove="removePost"
-      :posts="sortedAndSearchedPosts"
-      v-if="!isPostsLoading"
-    />
-    <div v-else>Loading...</div>
-    <div ref="observer" class="observer"></div>
+      <post-list
+        @remove="removePost"
+        :posts="sortedAndSearchedPosts"
+        v-if="!isPostsLoading"
+      />
+      <div v-else>Loading...</div>
+      <div ref="observer" class="observer"></div>
+    </div>
   </div>
 </template>
 
@@ -105,7 +107,7 @@ export default {
         this.posts = [...this.posts, ...response.data];
       } catch (e) {
         alert(e);
-      } 
+      }
     },
   },
   mounted() {
@@ -116,7 +118,7 @@ export default {
     };
     const callback = (entries, observer) => {
       if (entries[0].isIntersecting && this.page < this.totalPages) {
-        this.loadMorePosts()
+        this.loadMorePosts();
       }
     };
     const observer = new IntersectionObserver(callback, options);
@@ -148,8 +150,19 @@ export default {
   display: flex;
   justify-content: space-between;
 }
+#root {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 .app {
   padding: 20px 20px;
+  width: 75%;
+}
+@media (max-width: 768px) {
+  .app {
+    width: 100%;
+  }
 }
 .page__wrapper {
   display: flex;
