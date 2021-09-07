@@ -1,4 +1,10 @@
 <template>
+<h1>{{$store.state.isAuth?"User is Auth":"Please auth"}} </h1>
+  <h1>{{ $store.getters.doubleLikes }}</h1>
+  <div>
+    <my-button @click="$store.commit('incrementLikes')">Like</my-button>
+    <my-button @click="$store.commit('decrementLikes')">Dislike</my-button>
+  </div>
   <h1>Posts</h1>
   <my-input v-model="searchQuery" placeholder="Find" />
   <div class="app__btns">
@@ -34,7 +40,7 @@ export default {
     PostList,
     MyDialog,
     MyButton,
-    MyInput,
+    MyInput
   },
   data() {
     return {
