@@ -9,8 +9,6 @@
   <my-dialog v-model:show="dialogVisible">
     <post-form @create="createPost" />
   </my-dialog>
-
-  <post-form @create="createPost" />
   <post-list
     @remove="removePost"
     :posts="sortedAndSearchedPosts"

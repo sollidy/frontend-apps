@@ -1,8 +1,8 @@
 <template>
-  <div id="root">
-    <div class="app">
-      <navbar></navbar>
-      <router-view></router-view>
+  <div class="app">
+    <div class="conteiner">
+    <navbar></navbar>
+    <router-view></router-view>
     </div>
   </div>
 </template>
@@ -21,16 +21,23 @@ export default {
   box-sizing: border-box;
 }
 
-#root {
+/* #app {
   display: flex;
   flex-direction: column;
   align-items: center;
-}
+} */
+
 .app {
-  width: 55%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0px 0px 2px;
+}
+.conteiner {
+  width: 700px;
 }
 @media (max-width: 768px) {
-  .app {
+  .conteiner {
     width: 100%;
   }
 }
