@@ -1,5 +1,5 @@
 <template>
-  <h1>Store posts</h1>
+  <h1>Posts with store</h1>
   <my-input
     :model-value="searchQuery"
     @update:model-value="setSearchQuery"
