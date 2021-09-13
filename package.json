@@ -2,7 +2,7 @@
   "name": "ulbi-app",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://m7mark.github.io/ulbi-app/",
+  "homepage": "https://m7mark.github.io/ulbi-PostList-React/",
   "dependencies": {
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^12.0.0",
