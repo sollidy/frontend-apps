@@ -1,4 +1,4 @@
-# React Social-Net App
+# Vue 3 Post-list App
 
 A training Front End project for creating a multi-page website. The main page displays a list of posts. I receive data from a remote service via a rest api. The posts are loaded automatically after reaching the end of the current list. Search and sorting by content is also implemented.
 This course is on the YouTube channel [Ulbi TV](https://www.youtube.com/channel/UCDzGdB9TTgFm8jRXn1tBdoA).
