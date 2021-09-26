@@ -6,6 +6,10 @@ import GlobalStyles from "./components/styled/Global";
 import Card from "./components/Card";
 import Footer from "./components/Footer";
 
+declare module 'styled-components' {
+  type Theme = typeof theme;
+  export interface DefaultTheme extends Theme {}
+}
 const theme = {
   colors: {
     header: '#ebfbff',
