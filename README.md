@@ -3,7 +3,7 @@
 A training Front End  project for creating a multi-page website. The main page displays a list of posts. I receive data from a remote service via a rest api. The posts are loaded automatically after reaching the end of the current list. Search and sorting by content is also implemented. \
 This course is on the YouTube channel [Ulbi TV](https://www.youtube.com/channel/UCDzGdB9TTgFm8jRXn1tBdoA).
 
-![example](https://user-images.githubusercontent.com/70297692/133153483-13706e04-96c6-46ac-8aa0-8279bd1f312f.png)
+<a href="https://m7mark.github.io/ulbi-PostList-React/"><img src="https://user-images.githubusercontent.com/70297692/133153483-13706e04-96c6-46ac-8aa0-8279bd1f312f.png"/></a>
 
 ## Technologies used
 
