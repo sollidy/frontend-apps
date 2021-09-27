@@ -14,6 +14,5 @@ export const SocialIcons = () => {
                 <a href="https://vk.com"><FaLinkedin /></a>
             </li>
         </StyledSocialIcons>
-
     );
 };

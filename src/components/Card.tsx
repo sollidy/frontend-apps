@@ -1,5 +1,4 @@
 import { StyledCard } from "./styled/Card.styled"
-
 interface CardItem {
     item: {
         id: number,
@@ -16,10 +15,9 @@ export const Card: React.FC<CardItem> = ({ item: { id, title, body, image } }) =
                 <p>{body}</p>
             </div>
             <div>
-                <img src={`./images/${image}`} alt='' />
+                <img src={image} alt='' />
             </div>
         </StyledCard>
-
     );
 };
 

@@ -2,12 +2,13 @@ import { SocialIcons } from "./SocialIcons";
 import { Container } from "./styled/Container.styled";
 import { Flex } from "./styled/Flex.styled";
 import { StyledFooter } from "./styled/Footer.styled";
+import ImgFooter from '../assets/images/logo_white.svg'
 
 const Footer = () => {
     return (
         <StyledFooter>
             <Container>
-                <img src='./images/logo_white.svg' alt='' />
+                <img src={ImgFooter} alt='' />
                 <Flex>
                     <ul>
                         <li>
@@ -26,10 +27,8 @@ const Footer = () => {
                         <li>Blog</li>
                         <li>Contact Us</li>
                     </ul>
-
                     <SocialIcons />
                 </Flex>
-
                 <p>&copy; 2021 Huddle. All rights reserved</p>
             </Container>
         </StyledFooter>
