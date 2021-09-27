@@ -13,7 +13,7 @@ const Login = () => {
     }
 
     return (
-        <div className='item__margin__top'>
+        <div className='item__margin__top mobileMarginApp'>
             <h1>Login page</h1>
             <form onSubmit={login}>
                 <MyInput type='text' placeholder='Enter login' />

@@ -3,7 +3,7 @@ import React from 'react';
 const MySelect = ({ options, defaultValue, value, onChange }) => {
     return (
         <select
-            style={{padding: '5px', marginBottom: '5px'}}
+            style={{padding: '5px', marginBottom: '5px', fontSize: '16px'}}
             value={value}
             onChange={e => onChange(e.target.value)}
         >

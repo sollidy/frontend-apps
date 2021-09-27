@@ -26,7 +26,7 @@ const PostIdPage = () => {
             <h1>Post.{params.id}</h1>
             {isLoading
                 ? <Loader />
-                : <h3 className={'post'}>{post.title}</h3>
+                : <h3 style={{flexDirection:'raw'}} className={'post'}>{post.title}</h3>
             }
             <h1 className='item__margin__top'>Comments:</h1>
             {isComLoading

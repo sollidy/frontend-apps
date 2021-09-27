@@ -1,7 +1,9 @@
 * {
-    margin    : 0px;
-    padding   : 0px;
-    box-sizing: border-box;
+    margin      : 0px;
+    padding     : 0px;
+    box-sizing  : border-box;
+    font-family : 'Roboto', sans-serif;
+    /* font-size: 20px; */
 }
 
 #root {
@@ -22,13 +24,14 @@
     justify-content: space-between;
     align-items    : center;
 }
+
 .post__btns {
     display: flex;
 }
 
-.post__btns > * {
-    margin-left: 5px ;
-  } 
+.post__btns>* {
+    margin-left: 5px;
+}
 
 .post-enter {
     opacity  : 0;
@@ -57,13 +60,13 @@
 }
 
 .page {
-    padding: 10px;
-    border : 1px solid teal;
+    padding   : 10px;
+    border    : 1px solid teal;
     /* cursor : pointer; */
 }
 
 .page__current {
-    background: lightgrey;
+    background : lightgrey;
     font-weight: bold;
 }
 
@@ -79,17 +82,49 @@
 .navbar__links {
     margin-left: auto;
 }
+
 .navbar__items {
-    margin-left: 5px;
+    margin-left    : 5px;
     text-decoration: none !important;
-    padding   : 5px 15px;
-    color     : black;
-    background: white;
-    font-size : 14px;
-    border: 1px solid teal
-    
+    font-size      : 16px;
+    padding        : 5px 15px;
+    color          : black;
+    background     : white;
+    font-size      : 14px;
+    border         : 1px solid teal
 }
 
 .item__margin__top {
     margin-top: 20px;
+}
+
+.item__margin__bottom {
+    margin-bottom: 20px;
+}
+
+.PostList {
+    margin-top: 20px;
+}
+
+
+@media only screen and (max-width: 768px) {
+    .mobileMarginApp {
+        margin-right: 10px;
+        margin-left: 10px;
+    }
+
+    .App {
+        width: 95%;
+    }
+
+    .post {
+        flex-direction : column;
+    }
+
+    .post__content {
+        margin-bottom: 10px;
+    }
+    .item__centered {
+        text-align: center;
+    }
 }

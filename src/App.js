@@ -19,7 +19,7 @@ function App() {
       setIsAuth,
       isLoading
     }}>
-      <BrowserRouter>
+      <BrowserRouter basename="/ulbi-PostList-React">
         <Navbar />
         <AppRouter />
       </BrowserRouter>

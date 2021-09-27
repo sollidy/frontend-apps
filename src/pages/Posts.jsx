@@ -8,7 +8,6 @@ import PostsList from './../components/PostsList';
 import MyButton from './../components/UI/button/MyButton';
 import Loader from './../components/UI/Loader/Loader';
 import MyModal from './../components/UI/MyModal/MyModal';
-import Pagination from './../components/UI/paginate/Pagination';
 import { useFetching } from './../hooks/useFetching';
 import { usePosts } from './../hooks/usePosts';
 import './../styles/App.css'
@@ -49,9 +48,6 @@ function Posts() {
   const removePost = (post) => {
     setPosts(posts.filter(p => p.id !== post.id))
   }
-  // const changePage = (page) => {
-  //   setPage(page)
-  // }
 
   return (
     <div className='App'>
@@ -68,7 +64,7 @@ function Posts() {
         >
           <PostForm create={createPost} />
         </MyModal>
-        <hr style={{ margin: '15px 0' }} />
+        <hr style={{ margin: '15px 0'}} />
         <PostFilter
           filter={filter}
           setFilter={setFilter}
@@ -82,14 +78,7 @@ function Posts() {
       {postError &&
         <h1>Some error ocured - {postError}</h1>
       }
-      <div>
-        {!postError && <Pagination
-          totalPages={totalPages}
-          page={page}
-        // changePage={changePage}
-        />}
-      </div>
-      <div>
+      <div className='PostList'>
         {!postError &&
           < PostsList
             remove={removePost}
