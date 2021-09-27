@@ -88,7 +88,7 @@ function Posts() {
       </div>
       <div
         ref={lastElement}
-        style={{ marginTop: '10px', height: '20px', background: 'lightgray' }}>
+        style={{ marginTop: '10px', height: '20px', background: '#f3f3f33b' }}>
       </div>
       {isPostLoading &&
         <div

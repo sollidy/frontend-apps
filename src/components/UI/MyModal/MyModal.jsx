@@ -11,11 +11,13 @@ const MyModal = ({ children, visible, setVisible }) => {
             className={rootClasses.join(' ')}
             onClick={() => setVisible(false)}
         >
-            <div
-                className={cl.myModalContent}
-                onClick={(e) => e.stopPropagation()}
-            >
-                {children}
+            <div className='mobileMarginApp'>
+                <div
+                    className={cl.myModalContent}
+                    onClick={(e) => e.stopPropagation()}
+                >
+                    {children}
+                </div>
             </div>
         </div>
     );
