@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { AboutMe } from "../components/AboutMe";
 import { Navbar } from "../components/Navbar";
 import { Sidebar } from "../components/Sidebar";
 
@@ -12,6 +13,7 @@ export const Home = () => {
         <>
             <Sidebar isOpen={isOpen} toggle={toggle}/>
             <Navbar toggle={toggle}/>
+            <AboutMe />
         </>
     );
 };

@@ -1,7 +1,7 @@
 import { MobileIcon, Nav, NavbarContainer, NavBtn, NavBtnLink, NavItem, NavLink, NavLogo, NavMenu } from "./NavbarElements";
 import { FaBars } from 'react-icons/fa'
 
-export const Navbar = ({toggle}) => {
+export const Navbar = ({ toggle }) => {
     return (
         <>
             <Nav>
