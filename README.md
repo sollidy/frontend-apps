@@ -16,6 +16,7 @@ A training Front End project for creating a responsive landing page using Styled
 ## Technologies used
 
 - [React](https://reactjs.org/) single page application
+- [TypeScript](https://www.typescriptlang.org) - a strongly typed programming language
 - [Styled Components](https://styled-components.com/) styling
 
 ## Setup
