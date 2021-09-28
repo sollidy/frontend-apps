@@ -8,7 +8,7 @@ const PostItem = (props) => {
         <div className='post'>
             <div className='post__content'>
                 <h3>{props.post.id}.{props.post.title}</h3>
-                <div style={{marginTop:'10px'}}>{props.post.body}</div>
+                <p style={{marginTop:'10px'}}>{props.post.body}</p>
             </div>
             <div className='post__btns'>
                 <MyButton

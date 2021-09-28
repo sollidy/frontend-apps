@@ -7,11 +7,12 @@ const About = () => {
                 A training Front End project.
             </h1>
             <p>
-                The main page displays a list of posts. I receive data from a remote service via a rest api. The posts are loaded automatically after reaching the end of the current list. Search and sorting by content is also implemented.
-
-            </p>
-            <p>
-                This course is on the YouTube channel <b>Ulbi TV</b>.
+                <ul><h4>Technologies used</h4></ul>
+                <li><b>React</b> single page application </li>
+                <li>Routing done using <b>React Router</b></li>
+                <li><b>Hooks</b></li>
+                <li>Rest API via <b>Axios</b></li>
+                <li>Animation done using <b>React Transition Group</b> and <b>Intersection Observer API</b></li>
             </p>
         </div>
     );
