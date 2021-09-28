@@ -19,7 +19,7 @@ const Navbar = () => {
                         Posts </Link>
                 </div>
             }
-            <MyButton onClick={logout}>Logout</MyButton>
+            {isAuth && <MyButton onClick={logout}>Logout</MyButton>}
         </div>
     );
 }
