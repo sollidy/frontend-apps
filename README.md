@@ -11,7 +11,7 @@ A training Front End project for creating a responsive landing page using Styled
 
 
 
-<a href="https://m7mark.github.io/Traversy-Styled-React/"><img src="https://user-images.githubusercontent.com/70297692/134815918-95a4c872-7fb3-4b67-b71f-92dfae931bb4.png"/></a>
+<a href="https://m7mark.github.io/Traversy-Styled-React/"><img src="https://user-images.githubusercontent.com/70297692/135090423-a2a0627c-7fad-47fc-82d8-580b307c7499.png"/></a>
 
 ## Technologies used
 
