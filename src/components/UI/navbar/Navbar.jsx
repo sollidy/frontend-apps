@@ -11,7 +11,6 @@ const Navbar = () => {
     }
     return (
         <div className='navbar'>
-            <MyButton onClick={logout}>Logout</MyButton>
             {isAuth &&
                 <div className="navbar__links">
                     <Link to='/about' className="navbar__items">
@@ -20,6 +19,7 @@ const Navbar = () => {
                         Posts </Link>
                 </div>
             }
+            <MyButton onClick={logout}>Logout</MyButton>
         </div>
     );
 }

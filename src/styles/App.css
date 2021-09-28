@@ -12,6 +12,10 @@
     align-items   : center;
 }
 
+h1 {
+    text-align: center;
+}
+
 .App {
     width: 800px;
 }
@@ -19,7 +23,9 @@
 .post {
     display        : flex;
     padding        : 15px;
-    border         : 2px solid teal;
+    border-radius  : 15px;
+    box-shadow     : 0 0 10px rgba(0, 0, 0, 0.15);
+    padding        : 30px;
     margin-top     : 20px;
     justify-content: space-between;
     align-items    : center;
@@ -76,22 +82,31 @@
     display    : flex;
     align-items: center;
     padding    : 0 15px;
-    background : #ebf9ff;
+    background : #e8f0fe;
 }
 
 .navbar__links {
-    margin-left: auto;
+    margin-right: auto;
 }
 
 .navbar__items {
-    margin-left    : 5px;
-    text-decoration: none !important;
-    font-size      : 16px;
-    padding        : 5px 15px;
-    color          : black;
-    background     : white;
-    font-size      : 14px;
-    border         : 1px solid teal
+    margin-left     : 5px;
+    text-decoration : none !important;
+    border-radius   : 6px;
+    border          : none;
+    box-shadow      : 0 0 8px rgba(0, 0, 0, 0.15);
+    font-size       : 16px;
+    font-weight     : 700;
+    padding         : 10px 20px;
+    background-color: rgb(255, 255, 255);
+    color           : #333;
+    cursor          : pointer;
+    transition      : all 0.5s ease;
+}
+
+.navbar__items:hover {
+    /* opacity: 0.7; */
+    background-color: rgb(248, 243, 243)
 }
 
 .item__margin__top {
@@ -110,7 +125,7 @@
 @media only screen and (max-width: 768px) {
     .mobileMarginApp {
         margin-right: 10px;
-        margin-left: 10px;
+        margin-left : 10px;
     }
 
     .App {
@@ -118,12 +133,13 @@
     }
 
     .post {
-        flex-direction : column;
+        flex-direction: column;
     }
 
     .post__content {
         margin-bottom: 10px;
     }
+
     .item__centered {
         text-align: center;
     }

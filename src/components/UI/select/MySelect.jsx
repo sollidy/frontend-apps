@@ -1,9 +1,10 @@
-import React from 'react';
+import classes from './MySelect.module.css';
+
 
 const MySelect = ({ options, defaultValue, value, onChange }) => {
     return (
         <select
-            style={{padding: '5px', marginBottom: '5px', fontSize: '16px'}}
+            className={classes.mySelect}
             value={value}
             onChange={e => onChange(e.target.value)}
         >

@@ -18,26 +18,30 @@ const PostIdPage = () => {
     useEffect(() => {
         fetchPostById(params.id)
         fetchComments(params.id)
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
     const params = useParams()
     return (
         <div className='App item__margin__top'>
             <h1>Post.{params.id}</h1>
             {isLoading
-                ? <Loader />
-                : <h3 style={{flexDirection:'raw'}} className={'post'}>{post.title}</h3>
+                ? <div
+                    style={{ display: 'flex', justifyContent: 'center', marginTop: '20px' }}>
+                    <Loader />
+                </div>
+                : <h3 style={{ alignItems: 'flex-start' }} className={'post'}>{post.title}</h3>
             }
             <h1 className='item__margin__top'>Comments:</h1>
             {isComLoading
-                ? <Loader />
+                ? <div
+                    style={{ display: 'flex', justifyContent: 'center', marginTop: '20px' }}>
+                    <Loader />
+                </div>
                 : <div>
                     {comments.map(comm =>
                         <div className='item__margin__top' key={comm.id}>
-                            <h5>
-                                {comm.email}
-                            </h5>
-                            <div>
+                            <div style={{ flexDirection: 'column', alignItems: 'flex-start' }} className='post'>
+                                <b>{comm.email}</b>
                                 {comm.body}
                             </div>
                         </div>

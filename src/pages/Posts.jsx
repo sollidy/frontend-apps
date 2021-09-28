@@ -53,10 +53,15 @@ function Posts() {
     <div className='App'>
       <div>
         <MyButton
-          style={{ marginTop: '20px' }}
+          style={{ marginTop: '20px',marginRight:'5px'  }}
           onClick={() => setModal(true)}
         >
           New Post
+        </MyButton>
+        <MyButton
+          onClick={() => setLimit(100)}
+        >
+          Show all Posts
         </MyButton>
         <MyModal
           visible={modal}
@@ -64,16 +69,10 @@ function Posts() {
         >
           <PostForm create={createPost} />
         </MyModal>
-        <hr style={{ margin: '15px 0'}} />
         <PostFilter
           filter={filter}
           setFilter={setFilter}
         />
-        <MyButton
-          onClick={() => setLimit(100)}
-        >
-          Show all Posts
-        </MyButton>
       </div>
       {postError &&
         <h1>Some error ocured - {postError}</h1>
