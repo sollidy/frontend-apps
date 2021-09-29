@@ -18,14 +18,14 @@ export const Navbar = ({ toggle }) => {
                             <NavLink to='discover'>Discover</NavLink>
                         </NavItem>
                         <NavItem>
-                            <NavLink to='services'>Services</NavLink>
+                            <NavLink to='projects'>Projects</NavLink>
                         </NavItem>
                         <NavItem>
                             <NavLink to='signup'>Sign Up</NavLink>
                         </NavItem>
                     </NavMenu>
                     <NavBtn>
-                        <NavBtnLink to='/signin'>Sign In</NavBtnLink>
+                        <NavBtnLink to='/detailed'>Sign In</NavBtnLink>
                     </NavBtn>
                 </NavbarContainer>
             </Nav>
