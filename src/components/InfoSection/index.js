@@ -27,7 +27,7 @@ export const InfoSection = ({ lightBg, id, imgStart, topLine, lightText, headlin
                 <Subtitle lightTextDesc={lightTextDesc}>{description}</Subtitle>
                 <BtnWrap>
                   <Button
-                    to='/home'
+                    to='home'
                     smooth={true}
                     duration={500}
                     spy={true}

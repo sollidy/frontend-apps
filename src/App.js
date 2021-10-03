@@ -11,7 +11,7 @@ import { DetailedPage } from './pages/detailed';
 
 function App() {
   return (
-    <Router>
+    <Router basename='/portfolio-app-react'>
       <Switch>
         <Route path='/' component={Home} exact />
         <Route path='/detailed' component={DetailedPage} exact />

@@ -29,7 +29,18 @@ export const AboutMe = () => {
         <MeH1>Hi, my name is Mark</MeH1>
         <MeP>I'm the Node.js Developer</MeP>
         <MeBtnWrapper>
-          <Button to='signup' onMouseEnter={onHover} onMouseLeave={onHover} >Get started{hover ? <ArrowForward /> : <ArrowRight />}</Button>
+          <Button
+            to='about'
+            smooth={true}
+            duration={500}
+            spy={true}
+            exact='true'
+            offset={-80}
+            onMouseEnter={onHover}
+            onMouseLeave={onHover}
+          >
+            Get started{hover ? <ArrowForward /> : <ArrowRight />}
+          </Button>
         </MeBtnWrapper>
       </MeContent>
     </MeContainer>
