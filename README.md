@@ -1,5 +1,5 @@
 # React Responsive Landing Page
-
+[![Netlify Status](https://api.netlify.com/api/v1/badges/642486e0-3ff0-4cff-a424-2289765310ce/deploy-status)](https://app.netlify.com/sites/traversy-styled/deploys) \
 A training Front End project for creating a responsive landing page using Styled Components - https://youtu.be/02zO0hZmwnw
 
 #### A few benefits of the styled-components library are:
@@ -8,8 +8,6 @@ A training Front End project for creating a responsive landing page using Styled
 - Vendor prefixes are automatically added when using Styled Components, improving performance across browsers.
 - All unused CSS and styling gets removed automatically
 - You don’t write any class names, whatsoever. Class names are generated automatically, so there’s no need to manage a CSS class naming methodology like BEM. (This’ll make more sense as you go through the article)
-
-`<a href="https://m7mark.github.io/Traversy-Styled-React/"><img src="https://user-images.githubusercontent.com/70297692/135090423-a2a0627c-7fad-47fc-82d8-580b307c7499.png"/>``</a>`
 
 ## Technologies used
 
@@ -33,7 +31,7 @@ yarn start
 
 ### Test deployment
 
-The `develop` branch deploys to https://m7mark.github.io/Traversy-Styled-React/
+The `develop` branch deploys to https://traversy-styled.netlify.app
 
 ---
 
