@@ -1,43 +1,14 @@
-# React Posts List App
+# Done (React Posts List App)
 
-A training Front End  project for creating a multi-page website. The main page displays a list of posts. I receive data from a remote service via a rest api. The posts are loaded automatically after reaching the end of the current list. Search and sorting by content is also implemented. \
-This course is on the YouTube channel [Ulbi TV](https://www.youtube.com/channel/UCDzGdB9TTgFm8jRXn1tBdoA).
+`React`,`React-router-dom`,`Axios`,`React Transition Group`,`Intersection Observer API`
 
-<a href="https://m7mark.github.io/ulbi-PostList-React/"><img src="https://user-images.githubusercontent.com/70297692/135005047-930afa19-0c89-46d1-8708-2a8828e3f29d.png"/></a>
+https://youtu.be/GNrdg3PzpJQA
 
-## Technologies used
+##### DEPLOY TO
 
-- [React](https://reactjs.org/) single page application
-- Routing done using [React Router](https://reacttraining.com/react-router/web/guides/philosophy)
-- [Hooks](https://reactjs.org/docs/hooks-intro.html)
-- Rest API via [Axios](https://axios-http.com/)
-- Animation done using [React Transition Group](https://reactcommunity.org/react-transition-group/) & [Intersection Observer API](https://developer.mozilla.org/ru/docs/Web/API/Intersection_Observer_API)
-- ... \[other technologies\]
+https://youtu.be/GNrdg3PzpJQA
 
-## Setup
-
-1. Clone the repository and install the dependencies
-```bash
-yarn install
-```
-2. Start the frontend application locally
-```bash
-yarn start
-```
-
-## Routes
-
-This project is using [`react-router-dom`](https://reacttraining.com/react-router/core), have a look at `src/router/index.js` which is the file that defines the routes that are available.
-
-There are several routes to navigate to different pages of the app:
-
-- Posts - main page.
-- PostIdPage - single post page
-- About & Login
-
-### Test deployment
-
-The `develop` branch deploys to https://m7mark.github.io/ulbi-PostList-React
+![Preview](prev.png "Preview")
 
 ---
 
