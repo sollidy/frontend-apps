@@ -1,6 +1,6 @@
 # Done (React Posts List App)
 
-`React`, `React-router-dom`, `Axios`, `React Transition Group`, `Intersection Observer API` \
+`React`, `React-router-dom`, `Axios`, `React Transition Group`, `Intersection Observer API`
 
 https://youtu.be/GNrdg3PzpJQA
 
