@@ -1,45 +1,11 @@
-# Vue 3 Post-list App
+# Done (Vue3 Postlist App)
 
-A training Front End project for creating a multi-page website. The main page displays a list of posts. I receive data from a remote service via a rest api. The posts are loaded automatically after reaching the end of the current list. Search and sorting by content is also implemented.
-This course is on the YouTube channel [Ulbi TV](https://www.youtube.com/channel/UCDzGdB9TTgFm8jRXn1tBdoA).
+`Vue3`, `Vue router`, `VueX`, `Composition API`, `Intersection Observer API`
 
-<a href="https://m7mark.github.io/ulbi-PostList-Vue/"><img src="https://user-images.githubusercontent.com/70297692/134815918-95a4c872-7fb3-4b67-b71f-92dfae931bb4.png"/></a>
+https://youtu.be/XzLuMtDelGk
 
-## Technologies used
+##### DEPLOY TO
 
-- [Vue3](https://v3.vuejs.org/) codebase
-- Routing done using [Vue router](https://next.router.vuejs.org/)
-- [Composition API](https://composition-api.vuejs.org/)
-- API via [Axios](https://axios-http.com/)
-- Store: [VueX](https://vuex.vuejs.org/)
-- [Intersection Observer API](https://developer.mozilla.org/ru/docs/Web/API/Intersection_Observer_API)
+https://portfoliomark.netlify.app
 
-## Setup
-
-1. Clone the repository and install the dependencies
-```bash
-yarn install
-```
-2. Start the frontend application locally
-```bash
-yarn serve
-```
-
-## Routes
-
-This project is using [`Vue router`](https://next.router.vuejs.org/).
-
-There are several routes to navigate to different pages of the app:
-
-- Posts - native Vue single component.
-- Store - single component with VueX
-- Composition - single component with Composition API
-- About - some additional info
-
-### Test deployment
-
-The `develop` branch deploys to https://m7mark.github.io/ulbi-PostList-Vue/
-
----
-
-This app was bootstraped based on the template provided by [`vue create`](https://cli.vuejs.org/guide/creating-a-project.html#vue-create)
+![Preview](https://file+.vscode-resource.vscode-webview.net/c%3A/IT/JS/Vue/VuePostlistUlbi/ulbi-PostList-Vue/prev.png "Preview")
