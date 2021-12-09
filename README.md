@@ -8,4 +8,4 @@ https://youtu.be/XzLuMtDelGk
 
 https://portfoliomark.netlify.app
 
-![Preview](https://file+.vscode-resource.vscode-webview.net/c%3A/IT/JS/Vue/VuePostlistUlbi/ulbi-PostList-Vue/prev.png "Preview")
+![Preview](prev.png "Preview")
