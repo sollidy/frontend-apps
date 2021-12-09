@@ -7,7 +7,7 @@ https://youtu.be/Nl54MJDR2p8
 
 ##### DEPLOY TO
 
-https://posts-ulbi.netlify.app
+https://portfoliomark.netlify.app
 
 ---
 
