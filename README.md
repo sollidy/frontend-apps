@@ -1,5 +1,6 @@
 # Done (React Portfolio App)
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/5cfea9d2-ddd4-4133-ac12-eb4c392a6ce9/deploy-status)](https://app.netlify.com/sites/portfoliomark/deploys)
 
 `React`, `React-scroll`, `Styled-components`
 
