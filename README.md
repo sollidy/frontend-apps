@@ -8,7 +8,7 @@ https://youtu.be/bMknfKXIFA8
 
 ##### DEPLOY TO
 
-https://figmamark.netlify.app/
+https://codefigma.netlify.app
 
 ---
 
