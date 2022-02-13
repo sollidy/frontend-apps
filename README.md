@@ -5,7 +5,9 @@
 `React`, `@emotion/styled`, `@emotion/react`
 
 https://youtu.be/bMknfKXIFA8
+##### FIGMA TEMPLATE
 
+https://www.figma.com/file/4ctPLUvIn5b5Ep6YPOZWWd/Digital-Business-Card
 ##### DEPLOY TO
 
 https://codefigma.netlify.app
