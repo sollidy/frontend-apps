@@ -1,7 +1,9 @@
+import { CharactersList } from './pages/CharactersList'
 
 function App() {
   return (
     <div className="container mx-auto px-4">
+      <CharactersList />
       <h1 className="font-sans text-3xl text-amber-700 font-bold underline">
         Hello world!
       </h1>
@@ -12,7 +14,7 @@ function App() {
         Hello world
       </h1>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
