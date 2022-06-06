@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import { useCharacters } from '../hooks/useCharacters'
 
 export const CharactersList = () => {
@@ -9,10 +10,10 @@ export const CharactersList = () => {
       <div>
         {data.characters.results.map((character: any) => {
           return (
-            <div key={character.id}>
+            <Link to={`/${character.id}`} key={character.id}>
               <img src={character.image} alt="a" />
               <h2>{character.name}</h2>
-            </div>
+            </Link>
           )
         })}
       </div>
