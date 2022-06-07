@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import { PaginationPanel } from '../components/PaginationPanel'
 import { useCharacters } from '../hooks/useCharacters'
 
 export const CharactersList = () => {
@@ -6,24 +7,175 @@ export const CharactersList = () => {
   // if (loading) return <></>
   if (error) return <div>Network error</div>
   return (
-    <>
-      <div className="relative bg-white overflow-hidden">
-        <div className="max-w-7xl mx-auto">
-          <div className="relative z-10 pb-8 bg-white sm:pb-16 md:pb-20 lg:max-w-2xl lg:w-full lg:pb-28 xl:pb-31">
-            <div className="mt-10 mx-auto max-w-7xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28 ">
-              {data?.characters &&
-                data.characters.results.map((character: any) => {
-                  return (
-                    <Link to={`/${character.id}`} key={character.id}>
-                      <img src={character.image} alt="a" />
-                      <h2>{character.name}</h2>
-                    </Link>
-                  )
-                })}
-            </div>
-          </div>
+    <div className="px-4 sm:px-6 lg:px-8">
+      <div className="lg:text-center">
+        <p className="mt-6 sm:mt-8 lg:mt-10 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+          Characters of Universe
+        </p>
+        <p className="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">
+          Lorem ipsum dolor sit amet consect adipisicing elit. Possimus magnam
+          voluptatum cupiditate veritatis in accusamus quisquam.
+        </p>
+      </div>
+      <div className="py-6 ">
+        <div className="bg-white overflow-hidden shadow sm:rounded-lg">
+          <ul role="list" className="divide-y divide-gray-200">
+            <li>
+              <a href="#" className="block hover:bg-gray-50">
+                <div className="px-4 py-4 sm:px-6">
+                  <div className="flex items-center justify-between">
+                    <div className="text-sm font-medium text-green-600 truncate">
+                      Back End Developer
+                    </div>
+                    <div className="ml-2 flex-shrink-0 flex">
+                      <span className="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800">
+                        Full-time
+                      </span>
+                    </div>
+                  </div>
+                  <div className="mt-2 flex justify-between">
+                    <div className="sm:flex">
+                      <div className="mr-6 flex items-center text-sm text-gray-500">
+                        <svg
+                          className="flex-shrink-0 mr-1.5 h-5 w-5 text-gray-400"
+                          x-description="Heroicon name: solid/users"
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 20 20"
+                          fill="currentColor"
+                          aria-hidden="true"
+                        >
+                          <path d="M9 6a3 3 0 11-6 0 3 3 0 016 0zM17 6a3 3 0 11-6 0 3 3 0 016 0zM12.93 17c.046-.327.07-.66.07-1a6.97 6.97 0 00-1.5-4.33A5 5 0 0119 16v1h-6.07zM6 11a5 5 0 015 5v1H1v-1a5 5 0 015-5z"></path>
+                        </svg>
+                        Engineering
+                      </div>
+                    </div>
+                    <div className="flex items-center text-sm text-gray-500">
+                      <svg
+                        className="flex-shrink-0 mr-1.5 h-5 w-5 text-gray-400"
+                        x-description="Heroicon name: solid/location-marker"
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 20 20"
+                        fill="currentColor"
+                        aria-hidden="true"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z"
+                          clip-rule="evenodd"
+                        ></path>
+                      </svg>
+                      Remote
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" className="block hover:bg-gray-50">
+                <div className="px-4 py-4 sm:px-6">
+                  <div className="flex items-center justify-between">
+                    <div className="text-sm font-medium text-green-600 truncate">
+                      Front End Developer
+                    </div>
+                    <div className="ml-2 flex-shrink-0 flex">
+                      <span className="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800">
+                        Full-time
+                      </span>
+                    </div>
+                  </div>
+                  <div className="mt-2 flex justify-between">
+                    <div className="sm:flex">
+                      <div className="mr-6 flex items-center text-sm text-gray-500">
+                        <svg
+                          className="flex-shrink-0 mr-1.5 h-5 w-5 text-gray-400"
+                          x-description="Heroicon name: solid/users"
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 20 20"
+                          fill="currentColor"
+                          aria-hidden="true"
+                        >
+                          <path d="M9 6a3 3 0 11-6 0 3 3 0 016 0zM17 6a3 3 0 11-6 0 3 3 0 016 0zM12.93 17c.046-.327.07-.66.07-1a6.97 6.97 0 00-1.5-4.33A5 5 0 0119 16v1h-6.07zM6 11a5 5 0 015 5v1H1v-1a5 5 0 015-5z"></path>
+                        </svg>
+                        Engineering
+                      </div>
+                    </div>
+                    <div className="flex items-center text-sm text-gray-500">
+                      <svg
+                        className="flex-shrink-0 mr-1.5 h-5 w-5 text-gray-400"
+                        x-description="Heroicon name: solid/location-marker"
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 20 20"
+                        fill="currentColor"
+                        aria-hidden="true"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z"
+                          clip-rule="evenodd"
+                        ></path>
+                      </svg>
+                      Remote
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" className="block hover:bg-gray-50">
+                <div className="px-4 py-4 sm:px-6">
+                  <div className="flex items-center justify-between">
+                    <div className="text-sm font-medium text-green-600 truncate">
+                      User Interface Designer
+                    </div>
+                    <div className="ml-2 flex-shrink-0 flex">
+                      <span className="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800">
+                        Full-time
+                      </span>
+                    </div>
+                  </div>
+                  <div className="mt-2 flex justify-between">
+                    <div className="sm:flex">
+                      <div className="mr-6 flex items-center text-sm text-gray-500">
+                        <svg
+                          className="flex-shrink-0 mr-1.5 h-5 w-5 text-gray-400"
+                          x-description="Heroicon name: solid/users"
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 20 20"
+                          fill="currentColor"
+                          aria-hidden="true"
+                        >
+                          <path d="M9 6a3 3 0 11-6 0 3 3 0 016 0zM17 6a3 3 0 11-6 0 3 3 0 016 0zM12.93 17c.046-.327.07-.66.07-1a6.97 6.97 0 00-1.5-4.33A5 5 0 0119 16v1h-6.07zM6 11a5 5 0 015 5v1H1v-1a5 5 0 015-5z"></path>
+                        </svg>
+                        Design
+                      </div>
+                    </div>
+                    <div className="flex items-center text-sm text-gray-500">
+                      <svg
+                        className="flex-shrink-0 mr-1.5 h-5 w-5 text-gray-400"
+                        x-description="Heroicon name: solid/location-marker"
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 20 20"
+                        fill="currentColor"
+                        aria-hidden="true"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z"
+                          clip-rule="evenodd"
+                        ></path>
+                      </svg>
+                      Remote
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </li>
+          </ul>
+          <PaginationPanel />
         </div>
       </div>
-    </>
+    </div>
   )
 }

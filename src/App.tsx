@@ -7,14 +7,16 @@ import { Main } from './pages/Main'
 
 function App() {
   return (
-    <div>
-      <Header />
-      <Routes>
-        <Route path="/" element={<Main />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/characters" element={<CharactersList />} />
-        <Route path="/:id" element={<Character />} />
-      </Routes>
+    <div className=" bg-white overflow-hidden">
+      <div className="max-w-7xl mx-auto">
+        <Header />
+        <Routes>
+          <Route path="/" element={<Main />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/characters" element={<CharactersList />} />
+          <Route path="/:id" element={<Character />} />
+        </Routes>
+      </div>
     </div>
   )
 }
