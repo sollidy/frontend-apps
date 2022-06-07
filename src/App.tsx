@@ -1,5 +1,6 @@
 import { Route, Routes } from 'react-router-dom'
 import { Header } from './components/Header'
+import { About } from './pages/About'
 import { Character } from './pages/Character'
 import { CharactersList } from './pages/CharactersList'
 import { Main } from './pages/Main'
@@ -10,6 +11,7 @@ function App() {
       <Header />
       <Routes>
         <Route path="/" element={<Main />} />
+        <Route path="/about" element={<About />} />
         <Route path="/characters" element={<CharactersList />} />
         <Route path="/:id" element={<Character />} />
       </Routes>

@@ -1,5 +1,4 @@
 import { Link } from 'react-router-dom'
-import { HeaderMenu } from '../components/HeaderMenu'
 import { useCharacters } from '../hooks/useCharacters'
 
 export const CharactersList = () => {
