@@ -7,6 +7,10 @@ const GET_CHARACTERS = gql`
         id
         name
         image
+        species
+        origin {
+          dimension
+        }
       }
     }
   }
