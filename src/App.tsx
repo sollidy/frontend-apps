@@ -3,6 +3,7 @@ import { Header } from './components/Header'
 import { About } from './pages/About'
 import { Character } from './pages/Character'
 import { Characters } from './pages/Characters'
+import { CharacterList } from './pages/CharactersList'
 import { Main } from './pages/Main'
 
 function App() {
