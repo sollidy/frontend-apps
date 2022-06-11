@@ -5,7 +5,7 @@ const GET_CHARACTERS = gql`
     characters {
       results {
         id
-        name
+        names
         image
         species
         origin {
@@ -16,6 +16,8 @@ const GET_CHARACTERS = gql`
   }
 `
 export const useCharacters = () => {
-  const { error, data, loading } = useQuery(GET_CHARACTERS)
-  return { error, data, loading }
+  const { error, data, loading, refetch } = useQuery(GET_CHARACTERS, {
+    notifyOnNetworkStatusChange: true,
+  })
+  return { error, data, loading, refetch }
 }

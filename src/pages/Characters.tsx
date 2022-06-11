@@ -1,10 +1,14 @@
+import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
+import { ErrorModal } from '../components/ErrorModal'
 import { Spinner } from '../components/Spinner'
 import { useCharacters } from '../hooks/useCharacters'
 
 export const Characters = () => {
-  const { error, data, loading } = useCharacters()
-  if (error) return <div>Network error</div>
+  const { error, data, loading, refetch } = useCharacters()
+  if (error) {
+    return <ErrorModal refetch={refetch} />
+  }
   return (
     <div className="flex mb-8 px-4 sm:px-6 lg:px-8 lg:mt-8 flex-col lg:flex-row items-center lg:items-start ">
       <>
