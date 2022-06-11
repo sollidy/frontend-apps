@@ -5,7 +5,7 @@ const GET_CHARACTERS = gql`
     characters {
       results {
         id
-        names
+        name
         image
         species
         origin {

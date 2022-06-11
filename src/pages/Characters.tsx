@@ -1,4 +1,3 @@
-import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { ErrorModal } from '../components/ErrorModal'
 import { Spinner } from '../components/Spinner'
