@@ -26,7 +26,7 @@ export const Characters = () => {
           <Spinner />
         </div>
       ) : (
-        <div className="grid grid-cols-[repeat(2,170px)] mt-10 sm:gap-y-3 sm:grid-cols-[repeat(2,270px)]  w-full justify-evenly ">
+        <div className="grid grid-cols-[repeat(2,170px)] mt-10 sm:gap-y-3 sm:grid-cols-[repeat(2,minmax(270px,330px))] w-full justify-evenly">
           {data.characters.results.map((ch: any) => {
             return (
               <Link to={ch.id} key={ch.id}>

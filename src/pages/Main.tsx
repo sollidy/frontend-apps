@@ -36,7 +36,7 @@ export const Main = () => {
                   href="/"
                   className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-green-700 bg-green-100 hover:bg-green-200 md:py-4 md:text-lg md:px-10"
                 >
-                  Live demo
+                  GraphQL Doc
                 </a>
               </div>
             </div>
