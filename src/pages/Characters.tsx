@@ -1,15 +1,23 @@
-import { Link } from 'react-router-dom'
+import { Link, useSearchParams } from 'react-router-dom'
 import { ErrorModal } from '../components/ErrorModal'
 import { Spinner } from '../components/Spinner'
 import { useCharacters } from '../hooks/useCharacters'
 
 export const Characters = () => {
-  const { error, data, loading, refetch } = useCharacters()
+  const [page, setPage] = useSearchParams({ page: '1' })
+  const changePage = (e: React.MouseEvent<HTMLButtonElement>) => {
+    if (e.currentTarget.id === 'next')
+      setPage({ page: data.characters.info.next })
+    else setPage({ page: data.characters.info.prev })
+  }
+  const { error, data, loading, refetch } = useCharacters(
+    Number(page.get('page'))
+  )
   if (error) {
     return <ErrorModal refetch={refetch} />
   }
   return (
-    <div className="flex mb-8 px-4 sm:px-6 lg:px-8 lg:mt-8 flex-col lg:flex-row items-center lg:items-start ">
+    <div className="flex mb-8 px-4 sm:px-6 lg:px-8 lg:mt-8 flex-col lg:flex-row items-center lg:items-start min-h-[1400px]">
       <>
         <div className="max-w-xl lg:mx-0 lg:max-w-sm text-center lg:text-left">
           <p className="mt-6 sm:mt-10 lg:mt-13 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
@@ -19,6 +27,28 @@ export const Characters = () => {
             Lorem ipsum dolor sit amet consect adipisicing elit. Possimus magnam
             voluptatum cupiditate veritatis in accusamus quisquam.
           </p>
+          <div className="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
+            <div>
+              <button
+                id="prev"
+                onClick={changePage}
+                disabled={loading ? true : !data.characters.info.prev}
+                className="btn-primary disabled:opacity-60 disabled:pointer-events-none"
+              >
+                Prev
+              </button>
+            </div>
+            <div className="mt-3 sm:mt-0 sm:ml-3">
+              <button
+                id="next"
+                onClick={changePage}
+                disabled={loading ? true : !data.characters.info.next}
+                className="btn-primary disabled:opacity-60 disabled:pointer-events-none"
+              >
+                Next
+              </button>
+            </div>
+          </div>
         </div>
       </>
       {loading ? (

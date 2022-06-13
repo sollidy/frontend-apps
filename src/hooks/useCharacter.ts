@@ -5,6 +5,8 @@ const GET_CHARACTER = gql`
     character(id: $id) {
       id
       name
+      species
+      status
       image
       episode {
         name
@@ -14,8 +16,9 @@ const GET_CHARACTER = gql`
   }
 `
 export const useCharacter = (id: number | undefined) => {
-  const { error, data, loading } = useQuery(GET_CHARACTER, {
+  const { error, data, loading, refetch } = useQuery(GET_CHARACTER, {
     variables: { id },
+    notifyOnNetworkStatusChange: true,
   })
-  return { error, data, loading }
+  return { error, data, loading, refetch }
 }
