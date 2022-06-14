@@ -7,7 +7,7 @@ import { Main } from './pages/Main'
 
 function App() {
   return (
-    <div className=" bg-white overflow-hidden">
+    <div className="bg-white overflow-hidden dark:bg-gray-800">
       <div className="max-w-7xl mx-auto min-h-screen">
         <Header />
         <Routes>

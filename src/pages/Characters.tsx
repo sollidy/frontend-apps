@@ -20,10 +20,10 @@ export const Characters = () => {
     <div className="flex mb-8 px-4 sm:px-6 lg:px-8 lg:mt-8 flex-col lg:flex-row items-center lg:items-start min-h-[1400px]">
       <>
         <div className="max-w-xl lg:mx-0 lg:max-w-sm text-center lg:text-left">
-          <p className="mt-6 sm:mt-10 lg:mt-13 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+          <p className="mt-6 sm:mt-10 lg:mt-13 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl dark:text-gray-200">
             Universe characters
           </p>
-          <p className="mt-4 text-lg sm:text-xl text-gray-500  ">
+          <p className="mt-4 text-lg sm:text-xl text-gray-500 dark:text-gray-400">
             Lorem ipsum dolor sit amet consect adipisicing elit. Possimus magnam
             voluptatum cupiditate veritatis in accusamus quisquam.
           </p>
@@ -60,17 +60,17 @@ export const Characters = () => {
           {data.characters.results.map((ch: any) => {
             return (
               <Link to={ch.id} key={ch.id}>
-                <div className="flex flex-col sm:flex-row items-center text-center sm:text-left  hover:bg-gray-100 rounded-xl p-4 cursor-pointer">
+                <div className="flex flex-col sm:flex-row items-center text-center sm:text-left  hover:bg-gray-100 dark:hover:bg-gray-700 rounded-xl p-4 cursor-pointer">
                   <img
                     className="rounded-full h-24 sm:mr-5"
                     src={ch.image}
                     alt="rr"
                   />
                   <div className="mt-4 sm:mt-0">
-                    <div className="text-base sm:text-lg font-semibold">
+                    <div className="text-base sm:text-lg font-semibold dark:text-gray-300">
                       {ch.name}
                     </div>
-                    <div className="text-base sm:text-lg text-green-700 ">
+                    <div className="text-base sm:text-lg text-green-700 dark:text-green-500">
                       {ch.species}
                     </div>
                   </div>

@@ -17,10 +17,10 @@ export const Character = () => {
       ) : (
         <>
           <div className="max-w-xl lg:mx-0 lg:max-w-sm text-center lg:text-left">
-            <p className="mt-6 sm:mt-10 lg:mt-13 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+            <p className="mt-6 sm:mt-10 lg:mt-13 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 dark:text-gray-200 sm:text-4xl">
               {data.character.name}
             </p>
-            <p className="mt-4 text-lg sm:text-xl text-gray-500  ">
+            <p className="mt-4 text-lg sm:text-xl text-gray-500 dark:text-gray-400">
               Lorem ipsum dolor sit amet consect adipisicing elit. Possimus
               magnam voluptatum cupiditate veritatis in accusamus quisquam.
             </p>
@@ -38,9 +38,9 @@ export const Character = () => {
           </div>
           <>
             <div className="mt-10 max-w-4xl px-4 sm:px-6 ">
-              <div className="md:flex bg-slate-100 rounded-xl p-8 md:p-0 dark:bg-slate-800">
+              <div className="md:flex bg-gray-100 rounded-xl p-8 md:p-0 dark:bg-gray-900">
                 <img
-                  className="w-24 h-24 md:w-48 md:h-auto md:rounded-none rounded-full mx-auto"
+                  className="w-24 h-24 md:w-48 md:h-auto md:rounded-none md:rounded-l-xl rounded-full mx-auto"
                   src={data.character.image}
                   alt="photos"
                   width="384"
@@ -48,17 +48,17 @@ export const Character = () => {
                 />
                 <div className="pt-6 md:p-8 text-center md:text-left space-y-4">
                   <div>
-                    <p className="text-lg font-medium">
+                    <p className="text-lg font-medium dark:text-gray-400">
                       “Tailwind CSS is the only framework that I've seen scale
                       on large teams. It’s easy to customize, adapts to any
                       design, and the build size is tiny.”
                     </p>
                   </div>
                   <div className="font-medium">
-                    <div className="text-sky-500 dark:text-sky-400">
+                    <div className="text-green-500 dark:text-green-400">
                       {data.character.species}
                     </div>
-                    <div className="text-slate-700 dark:text-slate-500">
+                    <div className="text-gray-700 dark:text-gray-600">
                       {data.character.status}
                     </div>
                   </div>
