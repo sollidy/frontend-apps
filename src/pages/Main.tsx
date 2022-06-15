@@ -1,4 +1,8 @@
+import { useNavigate } from 'react-router-dom'
+
 export const Main = () => {
+  const navigate = useNavigate()
+
   return (
     <div className="relative ">
       <div className="relative z-10 pb-8 bg-white dark:bg-gray-800 sm:pb-16 md:pb-20 lg:max-w-2xl lg:w-full lg:pb-28 xl:pb-31">
@@ -24,9 +28,12 @@ export const Main = () => {
             </p>
             <div className="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
               <div>
-                <a href="/characters" className="btn-primary">
+                <button
+                  className="btn-primary"
+                  onClick={() => navigate('/characters')}
+                >
                   Characters
-                </a>
+                </button>
               </div>
               <div className="mt-3 sm:mt-0 sm:ml-3">
                 <a

@@ -8,6 +8,7 @@ import {
   MapIcon,
 } from '@heroicons/react/outline'
 import { ChevronDownIcon } from '@heroicons/react/solid'
+import { useNavigate } from 'react-router-dom'
 
 const source = [
   {
@@ -36,16 +37,17 @@ function classNames(...classes: any) {
 }
 
 export function Header() {
+  const navigate = useNavigate()
   return (
     <Popover className="relative ">
       <div className="px-4 sm:px-6">
         <div className="flex justify-between items-center border-b-2 dark:border-gray-700 border-gray-100 py-6 md:justify-start md:space-x-10">
           <div className="flex justify-start">
-            <a href="/">
+            <div onClick={() => navigate('/')} className="cursor-pointer">
               <span className="text-4xl font-black dark:text-gray-300">
                 r&m.
               </span>
-            </a>
+            </div>
           </div>
           <div className="-mr-2 -my-2 md:hidden">
             <Popover.Button className="bg-white dark:bg-gray-800 rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 dark:hover:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-green-500">
@@ -88,10 +90,10 @@ export function Header() {
                       <div className="rounded-lg shadow-lg ring-1 ring-black dark:ring-gray-500 ring-opacity-5 overflow-hidden">
                         <div className="relative grid gap-6 bg-white dark:bg-gray-800 px-5 py-6 sm:gap-8 sm:p-8">
                           {source.map((item) => (
-                            <a
+                            <div
                               key={item.name}
-                              href={item.href}
-                              className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700"
+                              onClick={() => navigate(item.href)}
+                              className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700 cursor-pointer"
                             >
                               <item.icon
                                 className="flex-shrink-0 h-6 w-6 text-green-600"
@@ -105,7 +107,7 @@ export function Header() {
                                   {item.description}
                                 </p>
                               </div>
-                            </a>
+                            </div>
                           ))}
                         </div>
                       </div>
@@ -114,12 +116,12 @@ export function Header() {
                 </>
               )}
             </Popover>
-            <a
-              href="/about"
-              className="text-base font-medium text-gray-500 hover:text-gray-900 dark:hover:text-gray-300 dark:text-gray-400"
+            <div
+              className="text-base font-medium text-gray-500 hover:text-gray-900 dark:hover:text-gray-300 dark:text-gray-400 cursor-pointer"
+              onClick={() => navigate('/about')}
             >
               About
-            </a>
+            </div>
           </Popover.Group>
         </div>
       </div>
@@ -151,10 +153,10 @@ export function Header() {
               <div className="mt-6">
                 <nav className="grid gap-y-8">
                   {source.map((item) => (
-                    <a
+                    <div
                       key={item.name}
-                      href={item.href}
-                      className="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50 dark:hover:bg-gray-700"
+                      onClick={() => navigate(item.href)}
+                      className="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50 dark:hover:bg-gray-700 cursor-pointer"
                     >
                       <item.icon
                         className="flex-shrink-0 h-6 w-6 text-green-600"
@@ -163,19 +165,19 @@ export function Header() {
                       <span className="ml-3 text-base font-medium text-gray-900 dark:text-gray-100">
                         {item.name}
                       </span>
-                    </a>
+                    </div>
                   ))}
                 </nav>
               </div>
             </div>
             <div className="py-6 px-5 space-y-6">
               <div>
-                <a
-                  href="/"
-                  className="w-full flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-green-600 hover:bg-green-700"
+                <div
+                  className="w-full flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-green-600 hover:bg-green-700 cursor-pointer"
+                  onClick={() => navigate('/')}
                 >
                   Sign up
-                </a>
+                </div>
               </div>
             </div>
           </div>
