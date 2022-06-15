@@ -24,8 +24,10 @@ export const Characters = () => {
             Universe characters
           </p>
           <p className="mt-4 text-lg sm:text-xl text-gray-500 dark:text-gray-400">
-            Lorem ipsum dolor sit amet consect adipisicing elit. Possimus magnam
-            voluptatum cupiditate veritatis in accusamus quisquam.
+            The show revolves around the adventures of the members of the Smith
+            household, which consists of parents Jerry and Beth, their children
+            Summer and Morty, and Beth's father, Rick Sanchez, who lives with
+            them as a guest.
           </p>
           <div className="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
             <div>

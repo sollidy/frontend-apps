@@ -21,8 +21,9 @@ export const Character = () => {
               {data.character.name}
             </p>
             <p className="mt-4 text-lg sm:text-xl text-gray-500 dark:text-gray-400">
-              Lorem ipsum dolor sit amet consect adipisicing elit. Possimus
-              magnam voluptatum cupiditate veritatis in accusamus quisquam.
+              Different versions of the characters inhabit other dimensions
+              throughout the show's multiverse and their personal
+              characteristics can vary from one reality to another.
             </p>
             <div className="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
               <div>
@@ -49,9 +50,8 @@ export const Character = () => {
                 <div className="pt-6 md:p-8 text-center md:text-left space-y-4">
                   <div>
                     <p className="text-lg font-medium dark:text-gray-400">
-                      “Tailwind CSS is the only framework that I've seen scale
-                      on large teams. It’s easy to customize, adapts to any
-                      design, and the build size is tiny.”
+                      Rick and Morty has been described as "a never-ending fart
+                      joke wrapped around a studied look into nihilism"
                     </p>
                   </div>
                   <div className="font-medium">
