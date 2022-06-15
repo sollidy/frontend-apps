@@ -58,13 +58,13 @@ export const ErrorModal = ({
                         as="h3"
                         className="text-lg leading-6 font-medium text-gray-900"
                       >
-                        Deactivate account
+                        Some Network Error
                       </Dialog.Title>
                       <div className="mt-2">
                         <p className="text-sm text-gray-500">
-                          Are you sure you want to deactivate your account? All
-                          of your data will be permanently removed. This action
-                          cannot be undone.
+                          Some network errors are mitigated and compensated for
+                          by network protocols and active networking components,
+                          like network interfaces.
                         </p>
                       </div>
                     </div>
