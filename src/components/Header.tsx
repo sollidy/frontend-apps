@@ -32,7 +32,7 @@ const source = [
   },
 ]
 
-function classNames(...classes: any) {
+function classNames(...classes: String[]) {
   return classes.filter(Boolean).join(' ')
 }
 

@@ -1,4 +1,24 @@
 import { useQuery, gql } from '@apollo/client'
+interface Results {
+  id: number
+  name: string
+  image: string
+  species: string
+  origin: Location
+}
+interface Location {
+  dimension: string
+}
+interface Info {
+  next: number | null
+  prev: number | null
+}
+interface CharactersData {
+  characters: {
+    info: Info
+    results: Results[]
+  }
+}
 
 const GET_CHARACTERS = gql`
   query GetCaharacters($page: Int!) {
@@ -20,9 +40,12 @@ const GET_CHARACTERS = gql`
   }
 `
 export const useCharacters = (page: number | null = 1) => {
-  const { error, data, loading, refetch } = useQuery(GET_CHARACTERS, {
-    variables: { page },
-    notifyOnNetworkStatusChange: true,
-  })
+  const { error, data, loading, refetch } = useQuery<CharactersData>(
+    GET_CHARACTERS,
+    {
+      variables: { page },
+      notifyOnNetworkStatusChange: true,
+    }
+  )
   return { error, data, loading, refetch }
 }

@@ -6,9 +6,11 @@ import { useCharacters } from '../hooks/useCharacters'
 export const Characters = () => {
   const [page, setPage] = useSearchParams({ page: '1' })
   const changePage = (e: React.MouseEvent<HTMLButtonElement>) => {
-    if (e.currentTarget.id === 'next')
-      setPage({ page: data.characters.info.next })
-    else setPage({ page: data.characters.info.prev })
+    if (e.currentTarget.id === 'next' && data?.characters.info.next)
+      setPage({ page: data.characters.info.next.toString() })
+    else if (e.currentTarget.id === 'prev' && data?.characters.info.prev) {
+      setPage({ page: data.characters.info.prev.toString() })
+    }
   }
   const { error, data, loading, refetch } = useCharacters(
     Number(page.get('page'))
@@ -34,7 +36,7 @@ export const Characters = () => {
               <button
                 id="prev"
                 onClick={changePage}
-                disabled={loading ? true : !data.characters.info.prev}
+                disabled={loading ? true : !data?.characters.info.prev}
                 className="btn-primary disabled:opacity-60 disabled:pointer-events-none"
               >
                 Prev
@@ -44,7 +46,7 @@ export const Characters = () => {
               <button
                 id="next"
                 onClick={changePage}
-                disabled={loading ? true : !data.characters.info.next}
+                disabled={loading ? true : !data?.characters.info.next}
                 className="btn-primary disabled:opacity-60 disabled:pointer-events-none"
               >
                 Next
@@ -59,27 +61,28 @@ export const Characters = () => {
         </div>
       ) : (
         <div className="grid grid-cols-[repeat(2,170px)] mt-10 sm:gap-y-3 sm:grid-cols-[repeat(2,minmax(270px,330px))] w-full justify-evenly">
-          {data.characters.results.map((ch: any) => {
-            return (
-              <Link to={ch.id} key={ch.id}>
-                <div className="flex flex-col sm:flex-row items-center text-center sm:text-left  hover:bg-gray-100 dark:hover:bg-gray-700 rounded-xl p-4 cursor-pointer">
-                  <img
-                    className="rounded-full h-24 sm:mr-5"
-                    src={ch.image}
-                    alt="rr"
-                  />
-                  <div className="mt-4 sm:mt-0">
-                    <div className="text-base sm:text-lg font-semibold dark:text-gray-300">
-                      {ch.name}
-                    </div>
-                    <div className="text-base sm:text-lg text-green-700 dark:text-green-500">
-                      {ch.species}
+          {data &&
+            data.characters.results.map((ch) => {
+              return (
+                <Link to={ch.id.toString()} key={ch.id}>
+                  <div className="flex flex-col sm:flex-row items-center text-center sm:text-left  hover:bg-gray-100 dark:hover:bg-gray-700 rounded-xl p-4 cursor-pointer">
+                    <img
+                      className="rounded-full h-24 sm:mr-5"
+                      src={ch.image}
+                      alt="rr"
+                    />
+                    <div className="mt-4 sm:mt-0">
+                      <div className="text-base sm:text-lg font-semibold dark:text-gray-300">
+                        {ch.name}
+                      </div>
+                      <div className="text-base sm:text-lg text-green-700 dark:text-green-500">
+                        {ch.species}
+                      </div>
                     </div>
                   </div>
-                </div>
-              </Link>
-            )
-          })}
+                </Link>
+              )
+            })}
         </div>
       )}
     </div>
