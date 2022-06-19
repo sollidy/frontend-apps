@@ -2,11 +2,11 @@
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/2b3d5716-a1a6-4cae-871e-b18cb8dc04f8/deploy-status)](https://app.netlify.com/sites/rickm/deploys)
 
-`React`, `Typescript`, `GraphQL`, `Tailwind`
+`React`, `Typescript`, `GraphQL`, `Tailwind`, `Apollo client`
 
 ##### DEPLOY TO
 
-[https://tenzigame.netlify.app](https://rickm.netlify.app)
+https://rickm.netlify.app
 
 ---
 
