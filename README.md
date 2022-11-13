@@ -1,6 +1,6 @@
-# Done (React Rick and Morty)
-
 [![Netlify Status](https://api.netlify.com/api/v1/badges/2b3d5716-a1a6-4cae-871e-b18cb8dc04f8/deploy-status)](https://app.netlify.com/sites/rickm/deploys)
+
+# React Rick and Morty characters GraphQl app
 
 `React`, `Typescript`, `GraphQL`, `Tailwind`, `Apollo client`
 
@@ -8,6 +8,4 @@
 
 https://rickm.netlify.app
 
----
-
-This app was bootstraped based on the template provided by [`create-react-app`](https://github.com/facebook/create-react-app)
+![preview](https://user-images.githubusercontent.com/70297692/201548931-3d4ad7ce-792b-4107-8406-051b098abc6c.png)
