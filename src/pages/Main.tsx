@@ -21,12 +21,10 @@ export const Main = () => {
               <span className="block text-green-600 xl:inline">Morty</span>
             </h1>
             <p className="mt-3 text-base text-gray-500 dark:text-gray-400 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:text-xl lg:mx-0">
-              An American adult animated science fiction sitcom created by
-              Justin Roiland and Dan Harmon for Cartoon Network's nighttime
-              programming block Adult Swim. The series follows the misadventures
-              of cynical mad scientist Rick Sanchez and his good-hearted, but
-              fretful grandson Morty Smith, who split their time between
-              domestic life and interdimensional adventures.
+              An American adult animated science fiction sitcom. The series
+              follows the misadventures of cynical mad scientist Rick Sanchez
+              and his good-hearted, but fretful grandson Morty Smith, who split
+              their time between domestic life and interdimensional adventures.
             </p>
             <div className="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
               <div>
