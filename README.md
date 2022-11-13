@@ -10,6 +10,6 @@ https://www.figma.com/file/4ctPLUvIn5b5Ep6YPOZWWd/Digital-Business-Card
 
 ##### DEPLOY
 
-https://codefigma.netlify.app
+https://s1mpleportfolio.netlify.app
 
 ![preview](https://user-images.githubusercontent.com/70297692/201551072-bfaeffff-9bbe-4db9-a1d1-a18e832d4837.png)
