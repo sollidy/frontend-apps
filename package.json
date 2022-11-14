@@ -1,18 +1,20 @@
 {
-  "name": "traversy-styled-react",
+  "name": "react-responsive-site",
   "version": "0.1.0",
   "private": true,
+  "license": "MIT",
+  "author": "Mark Pavlov <m7mark@yandex.ru> (https://github.com/m7mark)",
   "dependencies": {
-    "@testing-library/jest-dom": "^5.16.1",
-    "@testing-library/react": "^12.1.2",
-    "@testing-library/user-event": "^13.5.0",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "react-icons": "^4.3.1",
-    "react-scripts": "4.0.3",
-    "styled-components": "^5.3.3",
-    "typescript": "^4.5.2",
-    "web-vitals": "^2.1.2"
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^14.4.3",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-icons": "^4.6.0",
+    "react-scripts": "5.0.1",
+    "styled-components": "^5.3.6",
+    "typescript": "^4.8.4",
+    "web-vitals": "^3.0.4"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -38,6 +40,6 @@
     ]
   },
   "devDependencies": {
-    "@types/styled-components": "^5.1.17"
+    "@types/styled-components": "^5.1.26"
   }
 }
