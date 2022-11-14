@@ -2,6 +2,8 @@
   "name": "react-ts-figma",
   "version": "0.1.0",
   "private": true,
+  "license": "MIT",
+  "author": "Mark Pavlov <m7mark@yandex.ru> (https://github.com/m7mark)",
   "dependencies": {
     "@emotion/react": "^11.10.5",
     "@emotion/styled": "^11.10.5",
