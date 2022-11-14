@@ -1,23 +1,19 @@
-import './App.css';
+import './App.css'
 
-import {
-  BrowserRouter as Router,
-  Route,
-  Switch,
-} from 'react-router-dom';
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
 
-import { Home } from './pages';
-import { DetailedPage } from './pages/detailed';
+import { Home } from './pages'
+import { DetailedPage } from './pages/detailed'
 
 function App() {
   return (
-    <Router basename='/portfolio-app-react'>
-      <Switch>
-        <Route path='/' component={Home} exact />
-        <Route path='/detailed' component={DetailedPage} exact />
-      </Switch>
-    </Router>
-  );
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/detailed" element={<DetailedPage />} />
+      </Routes>
+    </BrowserRouter>
+  )
 }
 
-export default App;
+export default App
