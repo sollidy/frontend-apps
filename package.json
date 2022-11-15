@@ -2,6 +2,8 @@
   "name": "ulbi-app",
   "version": "0.1.0",
   "private": true,
+  "license": "MIT",
+  "author": "Mark Pavlov <m7mark@yandex.ru> (https://github.com/m7mark)",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.1",
     "@testing-library/react": "^12.1.2",
