@@ -10,4 +10,4 @@ https://youtu.be/GNrdg3PzpJQA
 
 https://posts-ulbi.netlify.app
 
-![preview](https://user-images.githubusercontent.com/70297692/201984847-ba9dedcb-fa12-4c1c-a9fc-2db78578e9bb.png)
+![preview](https://user-images.githubusercontent.com/70297692/201986131-0349050f-d319-482d-bbb9-fe6afcbaa750.png)
