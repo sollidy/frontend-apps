@@ -18,3 +18,9 @@
 ### 6. [React Responsive Landing Page](https://responsive-styled.netlify.app/)
 ##### `react-responsive-site`
 ![preview](https://user-images.githubusercontent.com/70297692/201552221-40f3eab7-7c60-4bc4-9ed8-4b882c089b3a.png)
+### 7. [React Posts list app with auth](https://posts-ulbi.netlify.app/)
+##### `react-ulbi-postlist`
+![preview](https://user-images.githubusercontent.com/70297692/201986131-0349050f-d319-482d-bbb9-fe6afcbaa750.png)
+### 8. [Vue3 Postlist app](https://vueposts.netlify.app/)
+##### `vue-ulbi-postlist`
+![preview](https://user-images.githubusercontent.com/70297692/201988197-faf9072f-b404-4022-a111-3a0a0755249a.png)
